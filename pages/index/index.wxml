@@ -1,12 +1,43 @@
 <!--index.wxml-->
+<!-- 引入模板 -->
+<import src="/pages/template/test-template.wxml"/>
+<!-- <include src="/pages/header/header.wxml/> -->
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text data-test="{{test}}">当前时间：{{time}}</text>
+      <button>{{undefined}}-undefined:不会输出到wxml中</button>
+      <text>{{a===10?"a就是10了":"a不是10，是"+a}}</text>
+      <view>
+        <text>{{a+10}}</text>
+        <button>{{a+"name"}}</button>
+        <button>{{a+name}}</button>
+      </view>
+      <view wx:if="{{length>1}}">1显示</view>
+      <view wx:elif="{{length>2}}">2</view>
+      <view wx:else>3</view>
+      <block wx:if="{{true}}">
+       <view>a12</view>
+       <view>a13</view>
+      </block>
+
+      <!-- bindtap:点击事件，冒泡的 -->
+      <button bindtap="addNumberToFront">关于减肥这件事情</button>
+      <view wx:for="{{array}}" wx:key="name">
+       <view >{{index}}:{{item.name}}-{{item.msg}}</view>
+      </view>
+      <switch wx:for="{{numArray}}" wx:key="*this">{{item}}</switch>
+      
     </block>
   </view>
+  <text>使用模板</text>
+  <block>
+    <template is="testTemplate"></template>
+   </block>
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

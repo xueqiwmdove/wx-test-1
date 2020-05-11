@@ -1,0 +1,2 @@
+<template name="testTemplate">这事一个模板</template>
+<view>模板以外的东西</view>

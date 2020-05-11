@@ -4,7 +4,18 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    test:'one', 
+    undefined:undefined,
+    a:12,
+    name:'+拼接',
+     motto: 'Hello World',
+     length:0,
+     array:[
+       { name: 'xueqi', msg: "该减肥了呀" },
+       {name:'xueyao ',msg:"你太胖了，该减肥了呀"},
+       ],
+       numArray:[1,2,3,4,5,6],
+    time: (new Date()).toString(),
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -14,6 +25,13 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  addNumberToFront:function(e){
+     const len = this.data.array.length;
+     this.data.array = [{name:"xuewen",msg:"姐姐真好"+len}].concat(this.data.array);
+     this.setData({
+       array:this.data.array
+     })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

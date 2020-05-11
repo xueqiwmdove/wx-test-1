@@ -2,13 +2,42 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "MiniProgram",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
   },
-  "sitemapLocation": "sitemap.json"
-}
+  "sitemapLocation": "sitemap.json",
+    "tabBar":{
+    "color": "#000",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index_icon.png",
+        "selectedIconPath": "images/index_active_icon.png"
+      },
+      {
+        "pagePath":"pages/logs/logs",
+        "text": "日志",
+          "selectedIconPath": "images/rizhi_active_icon.png",
+         "iconPath": "images/rizhi_icon.png" 
+      },
+      {
+        "pagePath":"pages/about/about",
+        "text":"关于",
+        "selectedIconPath": "images/about_active_icon.png",
+        "iconPath": "images/about_icon.png"
+
+      }
+    ]
+  }
+  }

@@ -1,0 +1,7 @@
+<!-- 
+    ecolor:'red'
+    efont:'48rpx'  在对应的js data中定义初始值。
+ -->
+<view class="page" style="color:{{ecolor}};font-size:{{efont}}">
+ 关于我们就是一个吹牛的地方，吸引用户的注意，然后买单，实现技术变相。
+</view>

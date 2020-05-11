@@ -1,0 +1,5 @@
+.page{
+  color: black;
+  text-indent: 100rpx;
+  padding: 10rpx;
+}
